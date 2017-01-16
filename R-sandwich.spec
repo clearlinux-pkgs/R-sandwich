@@ -4,7 +4,7 @@
 #
 Name     : R-sandwich
 Version  : 2.3
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/sandwich_2.3-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sandwich_2.3-4.tar.gz
 Summary  : Robust Covariance Matrix Estimators
@@ -25,9 +25,12 @@ No detailed description available
 %setup -q -c -n sandwich
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484548587
 
 %install
 rm -rf %{buildroot}
+export SOURCE_DATE_EPOCH=1484548587
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -37,7 +40,7 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library sandwich
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library sandwich
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export LANG=C
