@@ -4,14 +4,19 @@
 #
 Name     : R-sandwich
 Version  : 2.5.0
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/sandwich_2.5-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sandwich_2.5-0.tar.gz
 Summary  : Robust Covariance Matrix Estimators
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-plm
+Requires: R-Formula
+Requires: R-lmtest
+Requires: R-maxLik
+BuildRequires : R-Formula
 BuildRequires : R-car
+BuildRequires : R-lmtest
+BuildRequires : R-maxLik
 BuildRequires : R-multiwayvcov
 BuildRequires : R-pcse
 BuildRequires : R-plm
@@ -30,11 +35,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534712821
+export SOURCE_DATE_EPOCH=1552856021
 
 %install
+export SOURCE_DATE_EPOCH=1552856021
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1534712821
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -69,8 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library sandwich|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  sandwich || :
 
 
 %files
@@ -114,3 +118,10 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/sandwich/help/sandwich.rdx
 /usr/lib64/R/library/sandwich/html/00Index.html
 /usr/lib64/R/library/sandwich/html/R.css
+/usr/lib64/R/library/sandwich/tests/Examples/sandwich-Ex.Rout.save
+/usr/lib64/R/library/sandwich/tests/vcovCL.R
+/usr/lib64/R/library/sandwich/tests/vcovCL.Rout.save
+/usr/lib64/R/library/sandwich/tests/vcovPC.R
+/usr/lib64/R/library/sandwich/tests/vcovPC.Rout.save
+/usr/lib64/R/library/sandwich/tests/vcovPL.R
+/usr/lib64/R/library/sandwich/tests/vcovPL.Rout.save
