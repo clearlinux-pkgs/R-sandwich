@@ -2,6 +2,8 @@
 R-AER
 R-RcmdrMisc
 R-betareg
+R-drc
+R-haplo.stats
 R-lfe
 R-lmtest
 R-maxLik
