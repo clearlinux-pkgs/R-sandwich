@@ -4,13 +4,15 @@
 #
 Name     : R-sandwich
 Version  : 2.5.0
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/sandwich_2.5-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sandwich_2.5-0.tar.gz
 Summary  : Robust Covariance Matrix Estimators
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
+Requires: R-bdsmatrix
 BuildRequires : R-Formula
+BuildRequires : R-bdsmatrix
 BuildRequires : R-car
 BuildRequires : R-lmtest
 BuildRequires : R-maxLik
@@ -32,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552872954
+export SOURCE_DATE_EPOCH=1552886935
 
 %install
-export SOURCE_DATE_EPOCH=1552872954
+export SOURCE_DATE_EPOCH=1552886935
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
