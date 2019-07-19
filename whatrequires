@@ -1,16 +1,20 @@
 # This file contains recursive sources that require this package
-R-AER
 R-RcmdrMisc
 R-betareg
+R-coin
 R-drc
-R-haplo.stats
 R-lfe
+R-libcoin
 R-lmtest
 R-maxLik
 R-mi
 R-multcomp
 R-multiwayvcov
 R-party
+R-partykit
+R-plm
 R-pscl
+R-rms
 R-strucchange
 R-systemfit
+R-varImp

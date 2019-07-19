@@ -4,31 +4,19 @@
 #
 Name     : R-sandwich
 Version  : 2.5.1
-Release  : 43
+Release  : 44
 URL      : https://cran.r-project.org/src/contrib/sandwich_2.5-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sandwich_2.5-1.tar.gz
 Summary  : Robust Covariance Matrix Estimators
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-Formula
-Requires: R-bdsmatrix
 Requires: R-car
-Requires: R-lmtest
-Requires: R-maxLik
-Requires: R-miscTools
 Requires: R-multiwayvcov
-Requires: R-pcse
-Requires: R-plm
+Requires: R-scatterplot3d
 Requires: R-zoo
-BuildRequires : R-Formula
-BuildRequires : R-bdsmatrix
 BuildRequires : R-car
-BuildRequires : R-lmtest
-BuildRequires : R-maxLik
-BuildRequires : R-miscTools
 BuildRequires : R-multiwayvcov
-BuildRequires : R-pcse
-BuildRequires : R-plm
+BuildRequires : R-scatterplot3d
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
@@ -42,13 +30,13 @@ No detailed description available
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1554649980
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1563494968
 
 %install
-export SOURCE_DATE_EPOCH=1554649980
+export SOURCE_DATE_EPOCH=1563494968
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -77,7 +65,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
