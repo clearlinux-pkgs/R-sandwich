@@ -4,21 +4,23 @@
 #
 Name     : R-sandwich
 Version  : 2.5.1
-Release  : 44
+Release  : 45
 URL      : https://cran.r-project.org/src/contrib/sandwich_2.5-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sandwich_2.5-1.tar.gz
 Summary  : Robust Covariance Matrix Estimators
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-car
-Requires: R-multiwayvcov
-Requires: R-scatterplot3d
+Requires: R-pcse
+Requires: R-plm
 Requires: R-zoo
 BuildRequires : R-car
 BuildRequires : R-multiwayvcov
+BuildRequires : R-pcse
+BuildRequires : R-plm
 BuildRequires : R-scatterplot3d
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 No detailed description available
@@ -31,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563494968
+export SOURCE_DATE_EPOCH=1571906455
 
 %install
-export SOURCE_DATE_EPOCH=1563494968
+export SOURCE_DATE_EPOCH=1571906455
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
