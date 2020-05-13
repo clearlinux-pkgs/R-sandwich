@@ -1,5 +1,10 @@
 # This file contains build requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
 R-AER
-R-strucchange
+R-car
 R-geepack
+R-multiwayvcov
+R-pcse
+R-plm
+R-scatterplot3d
+R-strucchange
