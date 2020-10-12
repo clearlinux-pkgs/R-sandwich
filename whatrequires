@@ -2,7 +2,6 @@
 R-AER
 R-RcmdrMisc
 R-betareg
-R-coin
 R-lfe
 R-maxLik
 R-multcomp
@@ -10,8 +9,7 @@ R-multiwayvcov
 R-party
 R-partykit
 R-plm
-R-prais
 R-pscl
 R-strucchange
 R-systemfit
-R-varImp
+R-texreg
