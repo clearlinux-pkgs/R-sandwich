@@ -1,10 +1,10 @@
 # This file contains recursive sources that require this package
 R-AER
-R-MatchIt
 R-RcmdrMisc
 R-betareg
 R-lfe
 R-maxLik
+R-mlt
 R-multcomp
 R-multiwayvcov
 R-party
@@ -14,3 +14,4 @@ R-pscl
 R-strucchange
 R-systemfit
 R-texreg
+R-trtf
