@@ -2,6 +2,7 @@
 R-AER
 R-RcmdrMisc
 R-betareg
+R-fixest
 R-lfe
 R-maxLik
 R-mlt
@@ -14,4 +15,5 @@ R-pscl
 R-strucchange
 R-systemfit
 R-texreg
+R-tram
 R-trtf
