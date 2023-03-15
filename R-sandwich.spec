@@ -4,7 +4,7 @@
 #
 Name     : R-sandwich
 Version  : 3.0.2
-Release  : 72
+Release  : 73
 URL      : https://cran.r-project.org/src/contrib/sandwich_3.0-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sandwich_3.0-2.tar.gz
 Summary  : Robust Covariance Matrix Estimators
